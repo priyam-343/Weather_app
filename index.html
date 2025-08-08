@@ -1,87 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-   <!-- CodeWithManish -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather app</title>
+    <title>Professional Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://openweathermap.org/img/wn/04d@2x.png">
 </head>
 <body>
 
-    <div class="container">
-        <div class="wrapper">
-          <div class="img_section">
-            <div class="default_info">
-              <h2 class="default_day">Sunday</h2>
-              <span class="default_date">18 September 2023 </span>
-              <div class="icons">
-                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="" />
-                <h2 class="weather_temp">22°C</h2>
-                <h3 class="cloudtxt">Overcast Clouds</h3>
-              </div>
+    <div class="weather-app">
+        <div class="weather-app__sidebar">
+            <div class="weather-app__info">
+                <h2 class="weather-app__day">Friday</h2>
+                <span class="weather-app__date">8 August 2025</span>
+                <div class="weather-app__icon-section">
+                    <div class="weather-app__loader"></div>
+                </div>
+                <div class="weather-app__temp-conversion">
+                    <button class="weather-app__temp-btn active" data-unit="celsius">°C</button>
+                    <button class="weather-app__temp-btn" data-unit="fahrenheit">°F</button>
+                </div>
             </div>
-          </div>
-          <div class="content_section">
-            <form>
-              <input
-                type="text"
-                placeholder="Search Location"
-                class="input_field"
-              />
-              <button type="submit" class="btn_search">Search</button>
+        </div>
+        <div class="weather-app__main-content">
+            <form class="weather-app__search-form">
+                <input type="text" placeholder="Search for a city..." class="weather-app__input">
+                <button type="submit" class="weather-app__search-btn">Search</button>
             </form>
 
-            <div class="day_info">
-              <div class="content">
-                <p class="title">NAME</p>
-                <span class="value">United Kingdom</span>
-              </div>
-              <div class="content">
-                <p class="title">TEMP</p>
-                <span class="value">23°C</span>
-              </div>
-              <div class="content">
-                <p class="title">HUMIDITY</p>
-                <span class="value">2%</span>
-              </div>
-              <div class="content">
-                <p class="title">WIND SPEED</p>
-                <span class="value">2.92 Km/h</span>
-              </div>
+            <div class="weather-app__details">
+                <div class="weather-app__details-row">
+                    <p class="weather-app__details-label">Location</p>
+                    <span class="weather-app__details-value" data-id="location"></span>
+                </div>
+                <div class="weather-app__details-row">
+                    <p class="weather-app__details-label">Temperature</p>
+                    <span class="weather-app__details-value" data-id="temp"></span>
+                </div>
+                <div class="weather-app__details-row">
+                    <p class="weather-app__details-label">Humidity</p>
+                    <span class="weather-app__details-value" data-id="humidity"></span>
+                </div>
+                <div class="weather-app__details-row">
+                    <p class="weather-app__details-label">Wind Speed</p>
+                    <span class="weather-app__details-value" data-id="wind"></span>
+                </div>
             </div>
 
-            <div class="list_content">
-              <ul>
-                <li>
-                  <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                  <span>Sat</span>
-                  <span class="day_temp">23°C</span>
-                </li>
-                <li>
-                  <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                  <span>Sat</span>
-                  <span class="day_temp">23°C</span>
-                </li>
-                <li>
-                  <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                  <span>Sat</span>
-                  <span class="day_temp">23°C</span>
-                </li>
-                <li>
-                  <img src="https://openweathermap.org/img/wn/10d@2x.png" />
-                  <span>Sat</span>
-                  <span class="day_temp">23°C</span>
-                </li>
-              </ul>
+            <div class="weather-app__forecast">
+                <ul class="weather-app__forecast-list"></ul>
             </div>
-          </div>
         </div>
-      </div>
-
-
-
-
+    </div>
 
     <script src="script.js"></script>
 </body>
